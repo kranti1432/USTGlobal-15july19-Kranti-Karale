@@ -1,0 +1,11 @@
+
+<br>
+<br>
+<div class="container  card card-body col col-md-3 col-mt-8 offset-3">
+<form action=""  #enterForm='ngForm' (ngSubmit)="sendTask(enterForm.value)" >
+    <input type="text" name="add" #add='ngModel' ngModel required>
+    <br>
+    <br>
+    <button type="submit" >AddTask</button>
+</form>
+</div>
