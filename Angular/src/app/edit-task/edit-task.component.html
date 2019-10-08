@@ -1,0 +1,18 @@
+    <div class="col col-md-8 offset-2 mt-4 "> 
+        <table class="table table-hover table-bordered">
+            <thead class="bg-warning">
+                <tr>
+                    <th>Task Name</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let task of service.taskInfo'>
+                    <td>{{task.task_name}}</td>
+                    <td><button type="submit" class="btn btn-outline-danger" (click)='deleteTask(task.task_id)'>Delete</button></td>
+                    <td><button type="submit" class="btn btn-outline-primary" (click)='updateTask(task)'>Edit</button></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
