@@ -1,0 +1,11 @@
+<p>firebase works!</p>
+<div class="col-md-4 offset-md-4 mt-4">
+        <h3 class="text-center">Add User!</h3>
+    <form #form='ngForm' (ngSubmit)='postUser(form)'>
+        <input type="hidden" name="id" #id='ngModel' [(ngModel)]='FirebaseService.selectedUser.id'>
+        <input type="text" name="name" class="form-control mb-3 mt-3" #name='ngModel' [(ngModel)]='FirebaseService.selectedUser.name' placeholder="enter name">
+        <input type="email" name="email" class="form-control mb-3 " #name='ngModel'  [(ngModel)]='FirebaseService.selectedUser.email' placeholder="enter email">
+        <input type="tel" name="phno" class="form-control mb-3 " #name='ngModel'  [(ngModel)]='FirebaseService.selectedUser.phno' placeholder="enter phone no.">
+<button type="submit" class="btn btn-outline-success float-right">Submit</button>
+    </form>
+</div>

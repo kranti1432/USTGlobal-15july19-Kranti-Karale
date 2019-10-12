@@ -1,0 +1,11 @@
+
+
+    <div class="col-md-4">
+        <div class="card card-body col-md-12" *ngFor="let news of indianNews">
+            <img src="{{news.urlToImage}}">
+            <h3>{{news.title}}</h3>
+            <p>{{news.description}}</p>
+        <a href="{{news.url}}" type="button" class="btn btn-primary">click here for more</a>
+        </div>
+    </div>
+
