@@ -1,0 +1,28 @@
+<!-- <p>data-binding works!</p> -->
+
+<h1 [class]='textClasses'>{{name}}</h1>]
+
+<h1 [class.bg-danger]='redcolor' [class.bg-success]='!redcolor'>{{5+5}}</h1>
+<img  src="{{imgURL}}" alt="">
+<p [style.background]="paragraphstyle?   'red':'blue'" [style.padding]='padding'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est quo sapiente soluta tenetur, tempora similique! Voluptatem laboriosam aperiam debitis nisi.</p>
+<table class="table table-border">
+    <thead>
+
+<th [attr.colSpan]="columnspan">student</th>
+    </thead>
+    
+    <tbody>
+        <tr>
+        <td>1</td>
+        <td>kranti</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>sagar</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>shyam</td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,51 @@
+<style>
+tbody tr:hover{
+    background-color: rgb(141, 125, 125);
+    color:white;
+    transform: scale(1.1)
+}
+
+</style>
+
+<!-- <ul class="col-md-4 offset-md-4 mt-5 list list-group"> 
+    <li class="list list-group-item bg-info" *ngFor='let user of users'>{{user.name}}</li>
+    <li class="list list-group-item bg-success" *ngFor='let user of users'>{{user.id}}</li> 
+</ul>
+ -->
+<!-- 
+<div class="container">
+    <div *ngIf="condition" class="alert alert-success alert-dismissible"> removed successfully
+        <a href="#" class="close" data-dismiss="alert" aria-label="close" ><button class="btn btn-success">Close</button></a>
+    </div>
+     -->
+
+<table class="table table-hover bg-info table-bordered offset-md-3  mt-5 col-md-6"  >
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Id</th>
+            <th>City</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor='let user1 of users'>
+        <td>{{user1.name}}</td>
+<td>{{user1.id}}</td>
+<td>{{user1.city}}</td>
+<td><button class="btn btn-outline-danger" (click)='removeUser(user1)'>Remove</button></td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<br>
+
+<!-- </div> -->
+
+
+
+
+
+
+<!-- 
+<div *ngIf='condition'>condition is true</div> -->
