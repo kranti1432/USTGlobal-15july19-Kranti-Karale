@@ -1,0 +1,88 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+        function sum(a,b){
+            function addsum(){
+                return a+b;
+            }
+            return addsum;
+        } var addFunc=sum(10,20);
+        var total=addFunc();
+        console.log("**************************************");
+        
+        console.log(window);
+        console.log(this);
+        console.log(this===window);
+        var name='rakshit';
+        console.log(window.name);
+        console.log(this.name);
+
+        var person={
+            name:'salman',
+            age:30,
+            getName:function(){
+                console.log(this);
+                console.log(window);
+getData();
+    function getData(){
+        console.log(this.name);
+    }
+                return this.name;
+            }
+            
+
+        }
+        var heroname=person.getName();
+        console.log("name="+heroname);
+        console.log("**********************************");
+
+        for(var i=0;i<5;i++)
+        {
+            console.log(i);
+        }
+        console.log("Value of i "+i);
+
+
+        for(let j=0;j<5;j++)
+        {
+            console.log(j);
+        }
+        //console.log("Value of i "+j);
+        console.log("redecleration reassi using var is possible");
+         
+         var hobbies=['dancing','singing','cricket'];
+         console.log("hobbies is="+hobbies);
+         var hobbies=['numismatics'];
+         console.log("hobbies is="+hobbies);
+
+         hobbies=['joking']
+         console.log("hobbies is="+hobbies);
+
+
+         console.log("**************************")
+         console.log(" using let reassign possiblr but not redecleration");
+        let fruits=['orange','banana'];
+        console.log('fruits is='+fruits);
+        fruits=['jackfruit'];
+        console.log('fruits='+fruits);
+        console.log("*****************************")
+
+        console.log("nothing change only modification using constant");
+        const item=['lipstic','kajal','deo','wallet'];
+        console.log('items ='+item);
+        item[0]=['bag','book'];
+        console.log('items ='+item);
+
+
+        a=[10,[20,30],78]
+        for(let k=0;k<a[k].length;k++)
+        {
+            console.log(a[k]);
+        }
+        
+    </script>
+    </body>
+</html>

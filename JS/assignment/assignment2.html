@@ -1,0 +1,244 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+       
+        // __________________________________________circumfer of circle_______________________________________
+
+        function getArea( pi,r){                                   //named function
+            var c=2*pi*r;
+            return c;
+        }
+        var Areavalue=getArea(3.14,5);
+        console.log(Areavalue);
+//----------------------------------------------
+        var circum=function(pi,r){                                 //function expression
+            result1=2*pi*r;
+            return result1;
+         } 
+        var circum1=circum(3.142,2);
+         console.log(circum1);
+//------------------------------------------------        //anonymous function
+(function(pi,r){
+    result3=pi*2*r;
+    console.log(result3);
+}(3.142,2));
+//----------------------------------------------------//fat arrow
+
+var circum2=(pi,r)=>{
+    result4=2*pi*r;
+    console.log(result4);
+    return result4;
+} 
+
+// var result5= 
+circum2(3.142,2);
+// console.log(result5);
+
+// __________________________________________________________________factorial__________________________
+
+//_---------------------------------------------------- Named Function
+function getFact(num)
+{
+
+    var num3=1;
+    for( var i=1;i<=num;i++)
+    {
+        var num3=num3*i;
+        
+    }
+    return num3;
+} 
+var result2=getFact(4);
+console.log(result2);
+
+//-------------------------------------------------function expression
+
+var fact=function(s){
+    var num1=1;
+    for(var i=1;i<=s;i++){
+        var num1=num1*i;
+    }
+    return num1;
+}
+var result6=fact(5);
+
+console.log(result6);
+
+
+// -----------------------------------------------------anaonymous function
+
+(function(k){
+    var num2=1;
+    for(var i=1;i<=k;i++){
+        num2=num2*i;
+        
+
+}
+console.log(num2);
+}(3));
+
+//----------------------------------------------------------fat arrow
+
+var fact2=(h)=>{
+    var num4=1;
+    for(var i=1;i<=h;i++){
+        num4=num4*i;
+    }
+    console.log(num4);
+}
+fact2(2);
+
+
+
+
+// __________________________________________________________________fibonacci___________________________
+
+//----------------------------------------------------named function
+function getFibo(v){
+    var a=0;
+    var b=1;
+    var c;
+    for(var i=1;i<=v;i++){
+    c=a+b;
+    a=b;
+    b=c;
+    console.log("fibonacci is="+c);
+
+} 
+}getFibo(5);
+
+//---------------------------------------------------function expression
+
+var fact=function(a){
+    var kk=0;
+    var bb=1;
+    var cc;
+    for(var i=1;i<=a;i++){
+    cc=kk+bb;
+    kk=bb;
+    bb=cc;
+    console.log("fibonacci is="+cc);
+    }
+}
+
+fact(3);
+
+//-------------------------------------------------------anonymous function
+
+(function(m){
+    var ss=0;
+    var zz=1;
+    var ff;
+    for(var i=1;i<=m;i++){
+         ff= ss+zz;
+        ss=zz;
+        zz=ff;
+        console.log('fibonacci is='+ff);
+        
+
+}
+
+}(4));
+
+
+//---------------------------------------------------------------fat arrow
+
+var fibo=(j)=>{
+    var q=0;
+    var r=1;
+    var l;
+    for( var i=1;i<=j;i++){
+        l=q+r;
+        q=r;
+        r=l;
+        console.log(l);
+    }
+} 
+fibo(7);
+
+ 
+
+//  _______________________________________________________array addtion______________________________________
+
+//---------------------------------------------------- function expression
+
+var add=function(name1){
+    var sums=0;
+    for(i=0;i<name1.length;i++){
+    sums=sums+name1[i];
+    }
+    return sums;
+    // console.log(sum);
+}
+var result7=add([10,20,30]);
+console.log("addition is="+result7);
+
+//-------------------------------------------------------- named function
+s=add2([1,2,3,4]);
+
+console.log("addition is="+s)
+ function add2(u){
+    var sums=0;
+    for(i=0;i<u.length;i++){
+    sums=sums+u[i];
+    }
+    return sums;
+    
+}
+
+
+//--------------------------------------------------------anonymous function
+// var j=arr([3,2,1]);
+// console.log(j);
+// (function arr (x){
+//     var ks=0;
+//     for(i=0;i<=x.length;i++){
+//         ks=ks+x[i];
+//     }
+//     return ks;
+// });
+
+
+//-----------------------------------------fat arrow
+
+var add8=(t)=>{
+    var summ=0;
+    for(i=0;i<t.length;i++){
+    summ=summ+t[i];
+}
+console.log("addition is="+summ);
+}
+add8([1,2]);
+
+
+
+// function getPrime(num6){
+//     for(i=1;i<=num6;i++)
+//     if(num6%i===0){
+//          console.log("not primenumber");
+//      }
+//      else{
+//          console.log(" prime");
+//      }return num6;
+//  }
+//   getPrime(10); 
+
+
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+  
+
+  

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //string
+        var heroname='Akshay';
+        console.log("hero name="+heroname);
+        //number
+        var age=50;
+        console.log("age="+age);
+        //boolean
+        var sixpacks=false;
+        console.log('sixpacks='+sixpacks);
+        //null
+        var nulldata=null;
+        console.log("nulldata="+nulldata);
+        //undefined
+        var address;
+        console.log("data="+address);
+        
+    </script>
+    <script src='./jjjsss/app.js'></script>   
+                                                  <!-- ...........EXTERNAL JS...................... -->
+</head>
+<body>
+    <script>
+        var person={
+            name:'karnti',
+            age:22,
+            height:5.2,
+            getName:function(){
+                return this.name;
+                },
+
+            
+            // getage:function(){
+            //     return this.age;
+            
+            // }
+        };
+        console.log("name="+person.name);
+        console.log("Age="+person.age);
+        console.log("height="+person.height);
+        var name=person.getName();
+        console.log("name="+name);
+// var age=person.getage();
+//         console.log("age="+age);
+var num1=10;
+var name='myname';
+var num2='10';
+if(num1===num2){
+    console.log("equql");
+} else{
+    console.log("not equal");
+}
+var equals=(num1===num2)?"true":"false";
+console.log(equals);
+// _________________________________________________________________DATATYPES___________________________________
+
+var age=40;
+console.log(typeof age);
+var name='kranti';
+console.log(typeof name);
+var hobbies=['coding','singing','riding'];
+console.log(typeof hobbies);
+var isArry=Array.isArray(hobbies);
+console.log(isArry);
+// ___________________________________________________________complex array____________________
+var library=[{author:'kk',title:'love',price:100},
+{author:'kkk',title:'u',price:10000000000}
+];
+for(var i=0;i<library.length;i++){
+    console.log(library[i]);
+    console.log(library[i].author);
+    console.log(library[i].title);
+    console.log(library[i].price);
+}
+// _______________________________________________________________for and for of_______________________
+var person={
+    name:'kk',
+    age:22
+}
+for( var index in person){
+    console.log(person[index])
+}
+var hobbies=['a','b','c'];
+for(var index in hobbies)
+{
+    console.log(hobbies[index]);
+}
+for( var value of hobbies){
+    console.log(value);
+}
+// ____________________________________________for of=ignore ...  for in does not_____________________
+// var name=['kr','ka','ks'];
+// name[3]='sp';
+// name['hobbies']='paw';
+// for(var value of name){
+//     console.log(value);
+// }
+// for(var value in name){
+//     console.log(value);
+// }
+
+// ____________________________________________________________ named functions_____________________________
+function getSum(num1,num2){
+    var sum=num1+num2;
+    return sum;
+}
+var sumvalue=getSum(10,20);
+console.log(sumvalue);
+
+// ____________________________________________________________function expression__________________
+var sumData=function(num1,num2){
+    var sum=num1+num2;
+    return sum;
+}
+var sumValue1=sumData(5,20);
+console.log(sumValue1);
+
+// ________________________________IIFE(Immid invoked fun exp)____________anonymous function_________________________
+(function(val1,val2){
+    var sum=val1+val2;
+    console.log("sum="+sum);
+}(10,20));
+
+//  ___________________________________1 logic no {} req.___________fat arrow function =funct keyw not req.__________________         
+
+var getSumData=(val13,val14)=>{
+    var sumval1=val13+val14;
+    return sumval1;
+}
+var value=getSumData(100,200);
+console.log(value);
+
+
+    </script>
+    <!-- .................................................................. -->
+    
+    
+</body>
+</html>        

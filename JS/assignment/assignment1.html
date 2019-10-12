@@ -1,0 +1,136 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+       <script>
+           console.log(" 1.create a 5 objects using new keyword");
+        
+       var person=new Object();       //1st
+       person.firstname="john";
+       person.lastname='ibrahim';
+       person.age=33;
+       console.log(this.person);
+
+       var employee=new Object();
+       employee.name='kranti';
+       employee.age=22;
+       console.log(this.employee);     //2nd
+
+
+       var country=new Object();
+       country.name='india';
+       country.anotherName='bharat';
+       console.log(this.country);        //3rd
+
+       var student=new Object();
+       student.name='raju';
+       student.age=5;
+       console.log(this.student);         // 4th
+
+
+       var bank=new Object();
+       bank.name='BOI';
+       bank.area='basavangudi';
+       console.log(this.bank);             //5th
+
+
+
+       console.log("_______________________________________________");
+       console.log("2.create a 5 obj without using new  key");
+
+       var teacher={
+           name:'deshmukh',
+           age:30
+       };
+       console.log(this.teacher);          //1st
+
+
+       var school={                          
+                    name:'ZPPS',
+           students:100
+       };
+       console.log(this.school);           //2nd
+  
+
+
+       var girl={
+           name:'payal',
+        age:26
+       };
+       console.log(this.girl);          //3rd
+
+
+       var tree={
+           height:50,
+           color:"green"
+       };
+       console.log(this.tree);              //4th
+
+
+       var hotel={
+           name:"taj",
+           location:"mumbai"
+       };
+       console.log(this.hotel);            //5th
+
+
+       console.log("_______________________________________________");
+
+       console.log("3.create array using new keyword");
+
+       var names=new Array('kranti','neha');
+       console.log(names);                       //1st
+
+
+
+       var sirnames=new Array('karale','gadhe');
+       console.log(sirnames);                     //2nd
+
+
+       var trees=new Array('mango','orange');
+       console.log(trees);                         //3rd
+
+
+       var colours=new Array('pink','black');
+       console.log(colours);                       //4th
+
+
+       var cities=new Array('mumbai','pune');
+       console.log(cities);                        //5th
+
+       console.log("_______________________________________________");
+       console.log("4.create 5 obj without new keyword");
+
+       let numbers=[10,20,30,];                      //1st
+       console.log(numbers);
+
+       let languages=['hindi','english','marathi'];
+       console.log(languages);                      //2nd
+
+       var fruits=['orange','apple','banana'];
+       console.log(fruits);                          //3r
+
+       var float=[9.4,8.3,9.5];
+       console.log(float);                          //4th
+
+       var negative=[-55,-66,-77];
+       console.log(negative);                         //5th
+
+
+// console.log("_______________________________________________");
+//        console.log("5. through loop array");
+//        var intergers=[1,4,7,8,3,9];
+//        for(i=0;i<=intergers.length;i++){
+
+//            console.log(intergers[i]);
+
+//        }
+
+
+
+
+
+       </script> 
+    </body>
+</html>
