@@ -1,0 +1,25 @@
+<div class=" container col col-md-3 offset-3 mt-4 card card-body">
+    <h3 style="text-align: center"> Login Form </h3>
+    <h6 style="text-align: center">fiels with * are mandatory</h6>
+    <form action="" [formGroup]="login" (ngSubmit)="sendData(login.value)">
+        <div>
+               <h6 style="color: red">*</h6> <input type="email" name="username" placeholder="enter your username" formControlName='username'>
+       <div *ngIf='username.touched && username.invalid'>
+<div class="alert alert-warning" *ngIf='username.errors.email'>enter a mail</div>
+<div class="alert alert-warning" *ngIf='username.errors.minlength'>enter at least 6 character</div>
+<div class="alert alert-warning" *ngIf='username.errors.required'>email is requird</div>
+       </div>
+            </div>
+        <br>
+        <div>
+                <h6 style="color: red">*</h6> <input type="password" name="password" placeholder="enter your password" formControlName='password'>
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-success" style="text-align: center">Login</button>
+        </div>
+        <br>
+    </form>
+</div>
+
+
