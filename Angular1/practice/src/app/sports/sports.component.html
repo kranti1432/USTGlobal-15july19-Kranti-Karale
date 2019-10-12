@@ -1,0 +1,16 @@
+<div class="container col-md-3 mt-5 mx-4 float-left font-weight">
+        <h1 class="text-center bg-danger">  HEADLINES </h1>
+     <div class="card card-body" *ngFor='let sport of indianSport'>
+             <h3>{{sport.title}}</h3> <br>
+     </div>
+</div>
+
+<div class="container offset-4 col-md-6 mt-5  ">
+        <h1 class="text-center bg-warning text-light"> NEWSDETAILS</h1>
+ <div class="card card-body" *ngFor='let sport of indianSport'>
+     <img src={{sport.urlToImage}} alt="" class="card-img-top">
+     <h3>{{sport.title}}</h3>
+     <a href="{{sport.url}}" class="btn btn-primary">click</a>
+ </div>
+
+</div>

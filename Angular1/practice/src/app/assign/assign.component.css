@@ -1,0 +1,12 @@
+.row{
+    float: left;
+    
+}
+.card.card-body.col.col-md-3:hover{
+    color: blueviolet;
+    background-color: aqua;
+}
+.card.card-body.col.col-md-3{
+    background-color: lightcoral;
+    border-radius: 40px;
+}

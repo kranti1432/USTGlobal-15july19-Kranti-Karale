@@ -1,0 +1,4 @@
+.container .col-md-3{
+    scroll-behavior: smooth;
+    height: 400px;
+}

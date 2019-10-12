@@ -1,0 +1,17 @@
+<div class=" container col col-md-3 offset3 card card-body">
+    <form action="" #senduser='ngForm' (ngSubmit)='sendData(senduser.value)'>
+        <h3 class=" text align-center">Registration Form</h3>
+        <br>
+        <input type="text" placeholder="enter a name" name="uname" #uname='ngModel' ngModel>
+        <br><br>
+        <input type="number" placeholder="enter a contact no." name="contact" #contact='ngModel' ngModel>
+        <br>
+        <br>
+        <input type="email" placeholder="enter a mail" name="email" #email='ngModel' ngModel>
+        <br><br>
+        <button class="btn btn-primary">Add User</button>
+        <br><br>
+
+    </form>
+
+</div><br><br><br>

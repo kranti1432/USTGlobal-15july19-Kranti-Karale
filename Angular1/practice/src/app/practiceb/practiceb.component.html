@@ -1,0 +1,17 @@
+<div class="container table table-bordered col col-md-4 offset-2">
+    <div class="text align-center">REGISTRATION template</div><br>
+    <form #regForm='ngForm' (ngSubmit)=getuser(regForm)>
+        <div><input type="email" placeholder="enter a mail" name="email" #email="ngModel" ngModel required>
+            <div *ngIf="email.invalid && email.touched">
+                <div class="alert alert-danger" *ngIf="email.errors.required"> this field is required</div>
+            </div>
+        </div><br>
+        <div><input type="password" placeholder="enter password" name="pass" #pass="ngModel" ngModel required>
+            <div *ngIf="pass.invalid && pass.touched">
+                <div class="alert alert-danger" *ngIf="pass.errors.required"> this field is required</div>
+            </div>
+        </div><br><br>
+        <div><button class="btn btn-success">sumbit</button></div><br>
+    </form>
+</div>
+

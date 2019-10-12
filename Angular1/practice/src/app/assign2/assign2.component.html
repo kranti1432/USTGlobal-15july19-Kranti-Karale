@@ -1,0 +1,25 @@
+
+        <table class="table table-bordered table-hover ">
+            <thead class="bg-success">
+                <tr>
+                    
+                    <th>id</th>
+                    <th>avatar_url</th>
+                    <th>node_id</th>
+                    <th>url</th>
+                 </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let arr of array'>
+                    
+                    <td>{{arr.id}}</td>
+                    <td><a href="#">{{arr.avatar_url}}</a></td>
+                    <td>{{arr.node_id}}</td>
+                    <td><a href="#"> {{arr.url}}</a></td>
+                </tr>
+            </tbody>
+        </table>
+    
+
+
+

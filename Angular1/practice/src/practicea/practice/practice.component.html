@@ -1,0 +1,100 @@
+<!-- ______________________________________________STYLE BINDING__________________________________ -->
+
+<h2 [style.color]="haserror ? 'red':'green'">kranri karale</h2>
+<h2 [style.color]="heightlight">deepak karale</h2>
+<h2 [ngStyle]="kranti">shama karale</h2>
+
+
+
+<!-- _____________________________________________event binding__________________________________ -->
+<h3>event binding</h3>
+<button (click)="Onclick($event)">greeting</button>
+{{greeting}}
+<br>
+<br>
+<!-- ________________________________template referance variable (use # to variable to referance that)__________________________ -->
+<h4> template Referance</h4>
+<input #myInput type="text">
+<button (click)="OnData(myInput.value)">submit</button>
+<br>
+<br>
+<!--______________________________________________________________two-way binding bannana in box [()]-->
+
+<input [(ngModel)]="name" type="text">
+{{name}}
+<br>
+<!-- ________________________________________________________ngIf_____________________________________ -->
+
+<div *ngIf="display ;then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+    <h2>kranti</h2>
+</ng-template>
+<ng-template #elseBlock>
+    <h2>karale</h2>
+</ng-template>
+<br>
+<!-- __________________________________________________________ngFor we can false,true ,odd,even as index_________________________________________ -->
+
+<!-- <div *ngFor="let color of colors; index as i">
+    <h2>{{i+1}} {{color}}</h2>
+</div> -->
+<table class="table table-bordered  col col-md-3">
+    <thead>
+        <tr>
+            <th>sr.no</th>
+            <th>color name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let color of colors; index as i">
+            <td>{{i+1}}</td>
+            <td>{{color}}</td>
+        </tr>
+
+    </tbody>
+</table>
+<!--________________________________component interaction @io op ______________________-->
+<app-practicechild [method1]="name1" (childEvent)="getData=$event"></app-practicechild>
+<h3>{{getData}}</h3>
+<!-- _______________________________________________template driven form_ ______________________-->
+
+<div class="container table table-bordered col col-md-4 offset-2">
+    <div class="text align-center">REGISTRATION template</div><br>
+    <form #regForm='ngForm' (ngSubmit)=getData1(regForm.value)>
+        <div><input type="text" placeholder="enter name" name="name" ngModel></div><br>
+        <div><input type="email" placeholder="enter a mail" name="email" ngModel></div><br>
+        <div><button class="btn btn-success">sumbit</button></div><br>
+    </form>
+</div>
+<!-- ______________________________________REACTIVE FORM________________________________________________ -->
+<br><br>
+<div class="container table table-bordered col col-md-4 offset-2">
+    <h3>Login Reactive</h3>
+    <form action="" [formGroup]='loginform' (ngSubmit)=formData(loginform)>
+        <div class="form-group">
+            <input type="email" placeholder="Username" name="uname" formControlName='uname' required>
+            <div *ngIf='uname.touched && uname.invalid'>
+                <div class=" alert alert-danger" *ngIf='uname.errors.required'> username is required</div>
+                <div class=" alert alert-danger" *ngIf='uname.errors.minlength'>Enter minimum 6 character</div>
+                <div class=" alert alert-danger" *ngIf='uname.errors.email'>enter email</div>
+            </div>
+        </div>
+        <div>
+            <input type="password" placeholder="Password" name="pass" formControlName='pass'>
+            <div *ngIf='pass.touched && pass.invalid'>
+                <div class=" alert alert-danger" *ngIf='pass.errors.required'>password is required</div>
+                <div class="alert alert-danger" *ngIf='pass.errors.minlength'>enter atlest 4 character</div>
+            </div>
+        </div><br>
+        <div>
+            <button class="btn btn-primary">Login</button>
+        </div><br>
+    </form>
+</div>
+
+
+<!--  ----------------------------time interval---------------------- -->
+<!-- <img [src]="img" alt=""> -->
+<img src="{{img}}" alt="">
+<h1 [ngClass]="{'bg-dark':applicable,'text-white':applicable}">this is image from pixabay</h1>

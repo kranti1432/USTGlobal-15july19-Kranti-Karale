@@ -1,0 +1,18 @@
+<div class="container col-md-3 mt-5 mx-4 float-left font-weight">
+        <h1 class="text-center bg-danger">  HEADLINES </h1>
+     <div class="card card-body bg-warning" *ngFor='let technology of indianTechnology'>
+             <h3 class="text-info">{{technology.title}}</h3> <br>
+             <a href="{{technology.url}}" class="btn btn-primary">click</a>
+     </div>
+</div>
+
+<div class="container offset-4 col-md-7 mt-5  ">
+        <h1 class="text-center bg-warning text-light"> NEWSDETAILS</h1>
+ <div class="card card-body bg-danger mt-1" *ngFor='let technology of indianTechnology'>
+     <img src={{technology.urlToImage}} alt="" class="card-img-top ">
+     <h3>{{technology.title}}</h3>
+     <p class="mt-1"> {{technology.content}}</p>
+     <a href="{{technology.url}}" class="btn btn-primary">click</a>
+ </div>
+
+</div>
