@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	
+	<bean id="helloWord" class="com.tyssust_ty_springcore.beans.HellWord" >  
+	<!-- autowire="byName" -->
+	<property name="msg" value="Hello Kranti!!!!!!!!!"/>
+	<property name="count" value="77"/>
+	<!-- <property name="animal" ref="human"></property> -->
+	<property name="map">
+	<map>
+	<entry key="abc" value="112"></entry>
+	<entry key="xyz" value="342"></entry>
+	</map>
+	</property>
+	</bean>
+	<bean id="dog" class="com.tyssust_ty_springcore.beans.Dog" init-method="init" destroy-method="destroy">
+	</bean>
+	<bean id="human" class="com.tyssust_ty_springcore.beans.Human">
+	</bean>
+	
+	<bean id="postprocessor" class="com.beanlifycycle.bean.PostProcessor"></bean>
+	<bean id="factorypostprocessor" class="com.beanlifycycle.bean.FactoryPostProcessor"></bean>
+	
+	<!-- <bean id="pet" class="com.tyssust_ty_springcore.beans.Pet" >
+	autowire="constructor"
+	<constructor-arg name="name" value="judo"></constructor-arg>
+	<constructor-arg name="animal" ref="dog"></constructor-arg>
+	</bean> -->
+	</beans>
