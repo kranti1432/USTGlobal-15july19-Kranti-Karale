@@ -1,0 +1,82 @@
+/* table{
+    width:100%;
+    text-align: center;
+    font-family: cursive;
+}
+
+
+table, th,td{
+
+
+border-radius: 40px;
+cursor: pointer;
+padding: 20px 20px;
+
+}
+th{
+    color: deeppink;
+     background-color: lightgreen;
+}
+    
+
+td:hover{
+    color:white;
+    background-color: lavender;
+    
+}
+tr:nth-child(even){
+    background-color: cadetblue
+
+}
+tr:nth-child(odd){
+    background-color:pink;
+} */
+
+/* table,td{
+    border: 1px solid black;
+border-collapse: collapse;
+
+}
+table,th,td{
+    background-color:pink;
+    padding: 20px 20px;
+    cursor: pointer;
+    margin: 50px;
+    /* width:100px; */
+/* }
+td:hover{
+    background-color: darkolivegreen;
+}
+th:hover{
+    background-color:darkorange;
+}
+body{
+    background-color: cyan;
+
+}
+body:hover{
+    background-image: url('./ROY_6678.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+table{
+    box-shadow: 0  0 100px red;
+    margin-left:370px;
+    margin-top: 100px; */
+/* } */
+/* h1{
+    margin-top:50px; 
+    margin-left: 400px;
+} */
+/* caption{
+    font-size: 20px;
+    padding: 20px;
+    font-weight: bold;
+} */ 
+table{
+    border:1px solid black;
+}
+th{
+    border: 1pxx solid black;
+    
+}

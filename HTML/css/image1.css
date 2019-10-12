@@ -1,0 +1,23 @@
+.demo{
+    float: left;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 35px;
+    overflow: hidden;
+    text-align: center;
+
+
+}
+img{
+    width:300px;
+    height:300px;
+    transition: all 5s;
+}
+img:hover{
+    transform:scale(1.2,1.1);
+
+}
+.desc{
+    margin-top: 10px;
+    font-family: cursive;
+}
