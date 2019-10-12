@@ -1,0 +1,26 @@
+ <table class="table table-bordered table-hover col col-md-8 offset-1 mt-2 ">
+            <thead class="bg-success">
+                 <tr>
+                    <th>Name</th>
+                    <th>Id</th>
+                    <th>Photos</th>
+                    <th>repoURL</th>
+                    <th>FOLLOWERS</th>
+                    <th>Delete</th>
+                 </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let arr of array'>
+                    <td>{{arr.login}}</td>
+                    <td><a href="#">{{arr.id}}</a></td>
+                    <td><img style="height: 50%;" [src]="arr.avatar_url"></td>
+                    <td><a href="#"> {{arr.url}}</a></td>
+                    <td><a href="#"> {{arr.followers_url}}</a></td>
+                    <td><button class="btn btn-danger" onclick='remove(user)'>Remove</button></td>
+                </tr>
+            </tbody>
+        </table>
+    
+
+
+

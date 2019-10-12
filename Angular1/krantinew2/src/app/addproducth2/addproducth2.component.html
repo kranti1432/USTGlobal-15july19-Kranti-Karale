@@ -1,0 +1,14 @@
+<form #form='ngForm' (ngSubmit)='sendData(form.value)' class=" col col-md-4 offset-4 mt-5 card card-body" >
+  <div class="form-group">
+    <h1 class=" text-center text-white bg-dark">add product!</h1>
+    <input type="text" class="form-control" name='email' #email='ngModel' ngModel placeholder="Please enter the title of image">
+</div>
+<div class="form-group">
+  <input type="text" class="form-control" name='name' #name='ngModel' ngModel placeholder="Enter the image url">
+</div>
+<div class="form-group">
+  <textarea type="text" cols="30" rows="5" class="form-control" name='data' #data='ngModel' ngModel placeholder="Enter decription of image"></textarea>
+</div>
+
+  <button type="submit" class="btn btn-primary">Send Data</button>
+</form>
