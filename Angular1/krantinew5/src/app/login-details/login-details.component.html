@@ -1,0 +1,38 @@
+
+<table class="table table-bordered">
+    <tr>
+        <td>Sr.No</td>
+        <td>Email</td>
+        <td>Password</td>
+        <td>Update</td>
+        <td>Delete</td>
+    </tr>
+    <tr *ngFor='let user of User,index as i'>
+        <td>{{i+1}}</td>
+<td>{{user.email}}</td>
+<td>{{user.pass}}</td>
+<td><button type="submit" class="bg-warning" (click)="update(user)">Update</button></td>
+<div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+             <form action="" #login2='ngForm' (ngSubmit)="update2(login2)">
+                 <div class="form-group">
+                     <input type="email" class="form-control" id="" placeholder="enter a email" name="email1" #email1='ngModel' [(ngModel)]="selectedUser.email" ngModel required>
+                 </div>
+                 <div class="form-group">
+                        <input type="password" class="form-control" id="" placeholder="enter a password" [(ngModel)]="selectedUser.pass" name="pass1" #pass1='ngModel' ngModel required>
+                    </div>
+             <div>
+                 <button type="submit">Update</button>
+             </div>
+                 <button type="submit" class="btn btn-primary">Submit</button>
+             </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<td><button type="submit" class="bg-danger" (click)="delete(user)">Delete</button></td>
+    </tr>
+</table>

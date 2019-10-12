@@ -1,0 +1,30 @@
+<div  class="container col col-md-4 offset-4 mt-3 container table table-bordered">
+<form action="" [formGroup]='login' (ngSubmit)=submitData(login)>
+    <br>
+    <div>
+        <input type="email" name="email" formControlName="email" placeholder="enter a mail">
+        <br>
+        <div *ngIf='email.invalid && email.touched'>
+            <div class="alert alert-danger" *ngIf='email.errors.required'>
+                   email is required
+            </div>
+            <div  class="alert alert-danger" *ngIf='email.errors.minlength'> enter at least 7 character</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <input type="password" name="pass" formControlName="pass" placeholder="enter password">
+        <br>
+        <div  *ngIf='pass.invalid && pass.touched'>
+            <div  class="alert alert-danger"  *ngIf='pass.errors.required'>password is required</div>
+            <div  class="alert alert-danger"  *ngIf='pass.errors.minlength'> enter at least 6 character</div>
+        </div>
+    </div>
+    <br>
+    <div>
+        <button type="submit">login</button>
+    </div>
+    <br>
+    </form>
+</div>
+
