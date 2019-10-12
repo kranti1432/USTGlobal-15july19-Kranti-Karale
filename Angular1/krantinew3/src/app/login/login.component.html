@@ -1,0 +1,56 @@
+<!-- <div class="container">
+    <div class="card col-md-6 mt-2 offset-3">
+            <div class="card-body">
+
+            
+    <form action="" method="POST" role="form">
+
+        <legend>Login</legend>
+    
+        <div class="form-group">
+            <label for="">username</label><br>
+            <input type="text" class="form-control" id="" placeholder="Input field">
+        </div>
+    <div><label for="">Password</label><br>
+        <input type="password" class="form-control" id="" placeholder="Input field"></div>
+        <br>
+    
+        <button type="submit" class="btn btn-success mx-auto d-block">Login</button>
+    </form>
+    
+</div>
+</div>
+</div> -->
+
+
+
+
+<div class="container">
+    <div class="card col-md-6 mt-2 offset-3">
+            <div class="card-body">
+
+            
+    <form action="" #loginform='ngForm' (ngSubmit)='printform(loginform)'>
+
+        <legend>Login</legend>
+    
+        <div class="form-group">
+            <label for="password">username</label><br>
+            <input type="email" class="form-control" name="username" id="" placeholder="username" #username='ngmodel' ngModel required minlength="5" email>
+        <div *ngIf='username.touched && username.invalid'>
+            <div class="alert alert-danger " *ngIf='username.errors.email'>please enter the email</div>
+            <div class="alert alert-danger" *ngIf='username.errors.minlength' >please enter atleast 5 character</div>
+        </div>
+        </div>
+    <div><label for="">Password</label><br>
+        <input type="password" class="form-control" id="" placeholder="Password" name="password" #password='ngModel' ngModel></div>
+        <br>
+    <div class="btn-group col-md-12">
+        <button type="reset" class="btn btn-success mx-auto d-block">resert</button>
+        <button type="submit" class="btn btn-success mx-auto d-block" [disabled]='printform(loginform)'>sumbmit</button>
+    </div>
+    </form>
+    
+</div>
+</div>
+</div>
